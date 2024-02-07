@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Table and Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="table-container">
+    <table id="data-table">
+        <tr>
+            <th>ID</th>
+            <th>اليوم</th>
+            <th>التاريخ</th>
+            <th>نوع المحتوى</th>
+            <th>المنصة</th>
+            <th>تنسيق المحتوى</th>
+            <th>عنوان المحتوى</th>
+            <th>الهدف من المحتوى</th>
+        </tr>
+        <!-- Example row with data, repeat for 7 rows -->
+        <tr data-ref="1">
+            <td>1</td>
+            <td>السبت</td>
+            <td>10/2/2024</td>
+            <td>وعي</td>
+            <td>Facebook</td>
+            <td>احصائيات</td>
+            <td>عدد عمليات التوظيف و<br>الشركات التي تم العمل معها</td>
+            <td>توعية الفئة المستهدفة بخبرة و مدى فاعلية<br>شركة المنصة في المجال و ثقة العملاء بها</td>
+        </tr>
+        <tr data-ref="2">
+            <td>2</td>
+            <td>الاحد</td>
+            <td>11/2/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref="3">
+            <td>3</td>
+            <td>الاثنين</td>
+            <td>12/2/2024</td>
+            <td>ترويجي</td>
+            <td>Facebook</td>
+            <td>مقالة صغيرة</td>
+            <td>فرص التوظيف و دور شركات التوظيف</td>
+            <td>التعريف بدور خدمة التوظيف و القيمة المضافة التي يحصل عليها العميل</td>
+        </tr>
+        <tr data-ref="4">
+            <td>4</td>
+            <td>الثلاثاء</td>
+            <td>13/2/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref="5">
+            <td>5</td>
+            <td>الاربعاء</td>
+            <td>14/2/2024</td>
+            <td>تعليمي</td>
+            <td>Facebook</td>
+            <td>مقالة صغيرة</td>
+            <td>أهمية شبكات التواصل الاجتماعي في البحث عن عمل</td>
+            <td>تقديم محتوى تعليمي للجمهور يوضح لهم مدى أهمية متابعتهم لوسائل التواصل الاجتماعي في مجال العمل</td>
+        </tr>
+        <tr data-ref="6">
+            <td>6</td>
+            <td>الخميس</td>
+            <td>15/2/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref="7">
+            <td>7</td>
+            <td>الجمعة</td>
+            <td>16/2/2024</td>
+            <td>ترويجي</td>
+            <td>Facebook</td>
+            <td>صور</td>
+            <td>صور للقاعات التدريبية</td>
+            <td>صور للقاعات التدريبية تعرض التجهيزات الحديثة و البيئة المناسبة للتدريب</td>
+        </tr>
+        <tr data-ref="8">
+            <td>8</td>
+            <td>السبت</td>
+            <td>17/2/2024</td>
+            <td>تفاعلي</td>
+            <td>Facebook</td>
+            <td>تصويت</td>
+            <td>ما هي اكثر طرق التوظيف فاعلية و سهولة</td>
+            <td>محتوى تفاعلي يساهم في زيادة التفاعل مع الجمهور و شركة المنصة الكترونيا</td>
+        </tr>
+        <tr data-ref="9">
+            <td>9</td>
+            <td>الاحد</td>
+            <td>18/2/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref="10">
+            <td>10</td>
+            <td>الاثنين</td>
+            <td>19/2/2024</td>
+            <td>تعليمي</td>
+            <td>Facebook</td>
+            <td>مقالة صغيرة</td>
+            <td>توسيع افاق النجاح من خلال التدريب و التطوير</td>
+            <td>محتوى تعليمي يوضح اهمية تطوير فرق العمل في الشركات و عرض خدمة التطوير الاداري التي تقدمها شركة المنصة</td>
+        </tr>
+        <tr data-ref="11">
+            <td>11</td>
+            <td>الثلاثاء</td>
+            <td>20/2/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref="12">
+            <td>12</td>
+            <td>الاربعاء</td>
+            <td>21/2/2024</td>
+            <td>ترويجي</td>
+            <td>Facebook</td>
+            <td>فيديو (برومو)</td>
+            <td>الخدمات التي تقدمها شركة المنصة</td>
+            <td>عرض كافة خدمات شركة المنصة بشكل بصري</td>
+        </tr>
+        <tr data-ref="13">
+            <td>13</td>
+            <td>الخميس</td>
+            <td>22/2/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref="14">
+            <td>14</td>
+            <td>الجمعة</td>
+            <td>23/2/2024</td>
+            <td>ترويجي</td>
+            <td>Facebook</td>
+            <td>مقالة صغيرة</td>
+            <td>الانظمة الادارية و نظام الادارة الحديث</td>
+            <td>تقديم محتوى تعليمي يوضح حرص شركة المنصة على تقديمها افضل الخدمات بمتابعتها لآخر التطورات في مجال العمل</td>
+        </tr>
+        <tr data-ref="15">
+            <td>15</td>
+            <td>السبت</td>
+            <td>24/2/2024</td>
+            <td>توعوي</td>
+            <td>Facebook</td>
+            <td>قصة</td>
+            <td>قصة افتراضية لشخص تواصلت معه شركة المنصة بعد ان قدم لعرض عمل سابق كان تم عنه الاعلان مسبقا</td>
+            <td>تقديم قصة للجمهور توضح ان شركة المنصة تملك قاعدة بيانات من الاشخاص ذوي الخبرات العالية و ترشيحهم للفرص المناسبة</td>
+        </tr>
+        <tr data-ref="16">
+            <td>16</td>
+            <td>الاحد</td>
+            <td>25/2/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref="17">
+            <td>17</td>
+            <td>الاثنين</td>
+            <td>26/2/2024</td>
+            <td>مسؤولية مجتمعية</td>
+            <td>Facebook</td>
+            <td>صور</td>
+            <td>دور شركة المنصة في المجتمع (الزلزال)</td>
+            <td>اهمية انخراط الشركات في المجتمع كجزء لا يتجزأ منه و القيام بدورهم الحيوي فيه</td>
+        </tr>
+        <tr data-ref="18">
+            <td>18</td>
+            <td>الثلاثاء</td>
+            <td>27/2/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref="19">
+            <td>19</td>
+            <td>الاربعاء</td>
+            <td>28/2/2024</td>
+            <td>تفاعلي</td>
+            <td>Facebook</td>
+            <td>اسئلة مفتوحة</td>
+            <td>التحديات في ادارة الموارد البشرية</td>
+            <td>زيادة التفاعل بين الجمهور و شركة المنصة</td>
+        </tr>
+        <tr data-ref="20">
+            <td>20</td>
+            <td>الخميس</td>
+            <td>29/2/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref="21">
+            <td>21</td>
+            <td>الجمعة</td>
+            <td>1/3/2024</td>
+            <td>ترويجي</td>
+            <td>Facebook</td>
+            <td>تجربة عميل</td>
+            <td>مشكلة ادارية قامت شركة المنصة بحلها لاحد عملائها</td>
+            <td>تقديم شركة المنصة ك شركة رائدة في مجالها تملك خبرة كبيرة في تقديمها لخدمة الحلول الادارية</td>
+        </tr>
+        <tr data-ref="22">
+            <td>22</td>
+            <td>السبت</td>
+            <td>2/3/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref="23">
+            <td>23</td>
+            <td>الاحد</td>
+            <td>3/3/2024</td>
+            <td>تفاعلي</td>
+            <td>Facebook</td>
+            <td>اسئلة مفتوحة</td>
+            <td>ما هي اهم الممشاكل الداخلية التي تواجهونها في بيئة العمل</td>
+            <td>بناء تواصل رقمي فعال بين الجمهور و شركة المنصة</td>
+        </tr>
+        <tr data-ref="24">
+            <td>24</td>
+            <td>الاثنين</td>
+            <td>4/3/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref="25">
+            <td>25</td>
+            <td>الثلاثاء</td>
+            <td>5/3/2024</td>
+            <td>تعليمي</td>
+            <td>Facebook</td>
+            <td>مقالة صغيرة</td>
+            <td>مقال للاجابة عن اهم تسائل تم طرحه في منشور الاسئلة المفتوحة المتعلق بالتحديات الادارية</td>
+            <td>تقديم محتوى مرتبط بالاجابات التي قاموا بتقديمها لزيادة قوة الترابط بين العملاء و شركة المنصة</td>
+        </tr>
+        <tr data-ref="26">
+            <td>26</td>
+            <td>الاربعاء</td>
+            <td>6/3/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref="27">
+            <td>27</td>
+            <td>الخميس</td>
+            <td>7/3/2024</td>
+            <td>توعوي</td>
+            <td>Facebook</td>
+            <td>فيديو</td>
+            <td>قصة نجاح احد الاشخاص الذين تم توظيفهم عن طريق شركة المنصة</td>
+            <td>تعريف الجمهور بأهمية الفرص التي تقدمها شركة المنصة</td>
+        </tr>
+        <tr data-ref="28">
+            <td>28</td>
+            <td>الجمعة</td>
+            <td>8/3/2024</td>
+            <td>بيعي</td>
+            <td>Facebook</td>
+            <td>توظيف</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-ref=" 29">
+            <td>29</td>
+            <td>السبت</td>
+            <td>9/3/2024</td>
+            <td>تعليمي</td>
+            <td>Facebook</td>
+            <td>مقالة صغيرة</td>
+            <td>مقال للاجابة عن اهم تسائل تم طرحه في منشور الاسئلة المفتوحة المتعلق بالمشاكل في بيئة العمل</td>
+            <td>تقديم محتوى مرتبط بالاجابات التي قاموا بتقديمها لزيادة قوة الترابط بين العملاء و شركة المنصة</td>
+        </tr>
+    </table>
+</div>
+
+<div class="slider-container auto-slider" id="auto-slider-container">
+    <div class="slider-arrow left" id="auto-slider-left">&#10094;</div>
+    <!-- Images and texts for the automatic slider will be added here -->
+    <div class="slider-arrow right" id="auto-slider-right">&#10095;</div>
+</div>
+
+<div class="slider-container" id="slider-container">
+    <!-- Slider items will be dynamically added here -->
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
