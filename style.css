@@ -110,7 +110,7 @@ tr:nth-child(even) {
 }
 
 /* Responsive adjustments for mobile devices */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .table-container, .slider-container {
         margin: 10px;
         padding: 10px;
