@@ -15,6 +15,9 @@ th, td {
     border: 1px solid #ddd;
     text-align: left;
     padding: 6px;
+    white-space: nowrap; /* Prevent text from wrapping in table cells */
+    overflow: hidden; /* Hide overflowed text */
+    text-overflow: ellipsis; /* Show an ellipsis for overflowed text */
 }
 
 tr:nth-child(even) {
